@@ -122,7 +122,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jay Phillips", "Jason Goecke", "Ben Klang"]
 
-  s.date = "2008-08-21"
+  s.date = "2010-06-24"
   s.description = "Adhearsion is an open-source telephony development framework"
   s.email = "Jason&Adhearsion.com"
   s.executables = ["ahn", "ahnctl", "jahn"]
@@ -141,15 +141,18 @@ Gem::Specification.new do |s|
     s.specification_version = 2
 
     if current_version >= 3 then
+      s.add_runtime_dependency("bundler", [">= 0.9.0"])
       s.add_runtime_dependency("rubigen", [">= 1.0.6"])
       s.add_runtime_dependency("log4r", [">= 1.0.5"])
       s.add_runtime_dependency("activesupport", [">= 2.1.0"])
     else
+      s.add_dependency("bundler", [">= 0.9.0"])
       s.add_dependency("rubigen", [">= 1.0.6"])
       s.add_dependency("log4r", [">= 1.0.5"])
       s.add_dependency("activesupport", [">= 2.1.0"])
     end
   else
+    s.add_dependency("bundler", [">= 0.9.0"])
     s.add_dependency("rubigen", [">= 1.0.6"])
     s.add_dependency("log4r", [">= 1.0.5"])
     s.add_dependency("activesupport", [">= 2.1.0"])
